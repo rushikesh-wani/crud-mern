@@ -11,14 +11,16 @@ const Users = () => {
   }, []);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:8000/api/getall");
+    const res = await axios.get(
+      "https://crud-mern-server-ezz1.onrender.com/api/getall"
+    );
     setUser(res.data);
     // console.log(user);
   };
 
   const deleteUser = async (id) => {
     await axios
-      .delete(`http://localhost:8000/api/delete/${id}`)
+      .delete(`https://crud-mern-server-ezz1.onrender.com/api/delete/${id}`)
       .then((res) => {
         // This line of code is needed to refresh the table data but rather we have added state user in dependency array in useEffect()
         setUser((prevUser) => prevUser.filter((user) => user._id !== id));

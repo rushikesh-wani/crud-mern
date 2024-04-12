@@ -24,7 +24,7 @@ const UpdateUser = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`http://localhost:8000/api/update/${id}`, user)
+      .put(`https://crud-mern-server-ezz1.onrender.com/api/update/${id}`, user)
       .then((res) => {
         toast.success(res.data?.msg, {
           position: "top-right",
@@ -36,7 +36,7 @@ const UpdateUser = () => {
   const [user, setUser] = useState(userdetail);
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/getone/${id}`)
+      .get(`https://crud-mern-server-ezz1.onrender.com/api/getone/${id}`)
       .then((res) => {
         console.log(res);
         setUser(res.data);

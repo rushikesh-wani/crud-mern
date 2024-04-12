@@ -23,7 +23,7 @@ const AddUser = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:8000/api/create", user)
+      .post("https://crud-mern-server-ezz1.onrender.com/api/create", user)
       .then((res) => {
         toast.success(res.data?.msg, { position: "top-right" });
         navigate("/");

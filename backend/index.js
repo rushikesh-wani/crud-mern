@@ -7,7 +7,13 @@ import route from "./routes/userRoute.js";
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["crud-mern-server-bice.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 dotenv.config();
 
 const PORT = process.env.PORT || 7000;

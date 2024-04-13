@@ -16,6 +16,7 @@ const AddUser = () => {
     const { name, value } = e.target;
     // console.log(name);
     // console.log(value);
+    // console.log(`${name} : ${value}`);
     setUser({ ...user, [name]: value });
     // console.log(user);
   };

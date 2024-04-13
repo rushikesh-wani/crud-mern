@@ -35,7 +35,7 @@ const Users = () => {
   };
   return (
     <>
-      <div className="container bg-slate-200 w-screen h-screen pt-10 sm:p-20">
+      <div className=" bg-slate-200 w-screen h-screen pt-10 sm:p-20">
         <div className="flex justify-between mx-2 sm:mx-56">
           <h1 className="font-bold text-2xl py-4 uppercase">Records</h1>
           <div className="self-center">
@@ -109,7 +109,7 @@ const Users = () => {
                     </td>
                     <td className="px-6 py-4 flex space-x-3">
                       <Link
-                        to={"/view"}
+                        to={"/view/" + user._id}
                         className="bg- bg-sky-600 hover:bg-sky-500  shadow-md shadow-sky-300 text-white p-2 rounded-full"
                       >
                         <FaEye />
